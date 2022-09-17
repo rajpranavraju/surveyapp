@@ -1,0 +1,20 @@
+ [
+        {
+            "id":"suvey001",
+            "title": "Best Cricketer",
+            "description": "Choose the best cricketer",
+            "options":["Virat","Rohit Sharma"," R Jadeja","MS Dhoni"]
+        },
+        {
+            "id":"suvey002",
+            "title": "Best Commentator",
+            "description": "Choose the best commentator",
+            "options":["Harsha Bhogle","Wasim Akhram"," Ajay Jadeja","VVS Laxman"]
+        },
+        {
+            "id":"suvey003",
+            "title": "Best Laptop Brand",
+            "description": "Choose the best laptop brand",
+            "options":["HP","Lenovo","Asus","Apple"]
+        }
+]

@@ -1,0 +1,12 @@
+<div>
+    <h1> Survey App </h1>
+    <div class="d-flex p-2 bd-highlight justify-content-center">
+    <div v-for="survey in surveyList" class="card" style="width: 18rem; margin-left: 25px;">
+        <div class="card-body">
+          <h5 class="card-title">{{survey.title}}</h5>
+          <p class="card-text">{{survey.description}}</p>
+          <button @click="selectSurvey(survey.id)" class="btn btn-primary"> Select </button>
+        </div>
+      </div>
+    </div>
+</div>

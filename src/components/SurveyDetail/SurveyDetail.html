@@ -1,0 +1,43 @@
+<div class="container">
+<h1> Survey App </h1>
+<button class="btn btn-secondary" @click="goListing">Go to listing page</button>
+<div class="mx-0 mx-sm-auto">
+  <div class="card">
+    <div class="card-body">
+      <div class="text-center">
+        <i class="far fa-file-alt fa-4x mb-3 text-primary"></i>
+        <p>
+          <strong>{{surveyDet && surveyDet.title}}</strong>
+        </p>
+      </div>
+
+      <hr />
+      <form class="px-4">
+        <p class="text-center"><strong>{{surveyDet && surveyDet.description}}:</strong></p>
+        <div class="form-check mb-2" v-for="opt in surveyDet && surveyDet.options">
+          <input  type="radio" name="radioButton" :value="opt"/>
+          <label class="form-check-label">
+            {{opt}}
+          </label>
+        </div>
+
+      </form>
+    </div>
+    <div class="card-footer text-end">
+      <button @click="submitHandler" type="button" class="btn btn-primary">Submit</button>
+    </div>
+    
+  </div>
+</div>
+<div class="row">                   
+  <div class="progress" v-for="option in allOptions" style="margin-top: 10px;">
+    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50"
+    aria-valuemin="0" aria-valuemax="100" :style='"width:"+option.percentage+"%"'>
+     {{option.title}} - {{Math.round(option.percentage)}} %
+    </div>
+  </div>
+</div>
+
+<p>Instruction: Choose an option and click submit button. You can vote as many times you want</p>
+<p>Note: Refreshing the page will reset all votes</p>
+</div>
